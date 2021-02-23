@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Coding_Challenges
 {
@@ -7,12 +9,21 @@ namespace Coding_Challenges
 		static void Main(string[] args)
 		{
 			// Console.WriteLine("Hello World!");
-			int[] arr = { 9, 4, 9, 6, 7, 4 };
-			int n = arr.Length;
-			Console.WriteLine(FirstNonRepeating(arr, n));
-			
+			int[] sequence = { 1, 2, 3, 4, 5, 5, 3, 2 };
+			//int n = arr.Length;
+			//Console.WriteLine(FirstNonRepeating(arr, n));
+			Console.WriteLine("The Sequence is ");
+			foreach (var s in sequence)
+			{
+				Console.WriteLine(s);
+			}
+			int result = sequence.Max();
+			Console.WriteLine("Maximum Value:{0}", result);
 
 		}
+		#region FirstNonRepeating
+
+		
 		static int FirstNonRepeating(int[] arr, int n)
 		{
 			for (int i = 0; i < n; i++)
@@ -26,5 +37,6 @@ namespace Coding_Challenges
 			}
 			return -1;
 		}
+		#endregion
 	}
 }
