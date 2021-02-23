@@ -17,7 +17,7 @@ namespace Coding_Challenges
 			{
 				Console.WriteLine(s);
 			}
-			int result = sequence.Max();
+			int result = sequence.OrderByDescending(s => s).Skip(2).First();
 			Console.WriteLine("Maximum Value:{0}", result);
 
 		}
